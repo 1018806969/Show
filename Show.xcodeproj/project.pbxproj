@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A2A86B0DDD8F1416989043C7 /* libPods-Show.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D32B14B38F4C2D4669FF3D26 /* libPods-Show.a */; };
+		B4B220691E150EB500BA4B07 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220681E150EB500BA4B07 /* TitleView.m */; };
+		B4B2206F1E16039900BA4B07 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B2206E1E16039900BA4B07 /* RankViewController.m */; };
+		B4B220721E16097800BA4B07 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220711E16097800BA4B07 /* HotViewController.m */; };
+		B4B220751E16098800BA4B07 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220741E16098800BA4B07 /* NewViewController.m */; };
+		B4B220781E16099600BA4B07 /* CareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220771E16099600BA4B07 /* CareViewController.m */; };
 		B4DA00041E13A3F40072405E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA00031E13A3F40072405E /* main.m */; };
 		B4DA00071E13A3F40072405E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA00061E13A3F40072405E /* AppDelegate.m */; };
 		B4DA000F1E13A3F40072405E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DA000E1E13A3F40072405E /* Assets.xcassets */; };
@@ -28,6 +33,17 @@
 
 /* Begin PBXFileReference section */
 		0D34589153B87F9055632C5B /* Pods-Show.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Show/Pods-Show.debug.xcconfig"; sourceTree = "<group>"; };
+		B4B220671E150EB500BA4B07 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
+		B4B220681E150EB500BA4B07 /* TitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
+		B4B2206C1E15126600BA4B07 /* Show-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Show-Prefix.pch"; sourceTree = "<group>"; };
+		B4B2206D1E16039900BA4B07 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		B4B2206E1E16039900BA4B07 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		B4B220701E16097800BA4B07 /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
+		B4B220711E16097800BA4B07 /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
+		B4B220731E16098700BA4B07 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		B4B220741E16098800BA4B07 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		B4B220761E16099600BA4B07 /* CareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareViewController.h; sourceTree = "<group>"; };
+		B4B220771E16099600BA4B07 /* CareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareViewController.m; sourceTree = "<group>"; };
 		B4DA00031E13A3F40072405E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4DA00051E13A3F40072405E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4DA00061E13A3F40072405E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +99,76 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B4B220611E150DC100BA4B07 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA00191E13A4720072405E /* LoginViewController.h */,
+				B4DA001A1E13A4720072405E /* LoginViewController.m */,
+				B4DA00271E13C2AE0072405E /* LoginView.h */,
+				B4DA00281E13C2AE0072405E /* LoginView.m */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		B4B220621E150DC600BA4B07 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA001C1E13AAE80072405E /* TXNetworkTool.h */,
+				B4DA001D1E13AAE80072405E /* TXNetworkTool.m */,
+				B4DA003C1E14BBAF0072405E /* UIDevice+TExtension.h */,
+				B4DA003D1E14BBAF0072405E /* UIDevice+TExtension.m */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		B4B220631E150E2100BA4B07 /* me */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA00391E14B5630072405E /* MeViewController.h */,
+				B4DA003A1E14B5630072405E /* MeViewController.m */,
+			);
+			name = me;
+			sourceTree = "<group>";
+		};
+		B4B220641E150E2500BA4B07 /* nav&tarbar */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA00301E14B1430072405E /* NavigationController.h */,
+				B4DA00311E14B1430072405E /* NavigationController.m */,
+				B4DA002D1E14B0810072405E /* TarBarController.h */,
+				B4DA002E1E14B0810072405E /* TarBarController.m */,
+			);
+			name = "nav&tarbar";
+			sourceTree = "<group>";
+		};
+		B4B220651E150E4A00BA4B07 /* live */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA00361E14B5590072405E /* LiveViewController.h */,
+				B4DA00371E14B5590072405E /* LiveViewController.m */,
+			);
+			name = live;
+			sourceTree = "<group>";
+		};
+		B4B220661E150E4F00BA4B07 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA00331E14B54C0072405E /* HomeViewController.h */,
+				B4DA00341E14B54C0072405E /* HomeViewController.m */,
+				B4B220671E150EB500BA4B07 /* TitleView.h */,
+				B4B220681E150EB500BA4B07 /* TitleView.m */,
+				B4B220701E16097800BA4B07 /* HotViewController.h */,
+				B4B220711E16097800BA4B07 /* HotViewController.m */,
+				B4B220731E16098700BA4B07 /* NewViewController.h */,
+				B4B220741E16098800BA4B07 /* NewViewController.m */,
+				B4B220761E16099600BA4B07 /* CareViewController.h */,
+				B4B220771E16099600BA4B07 /* CareViewController.m */,
+				B4B2206D1E16039900BA4B07 /* RankViewController.h */,
+				B4B2206E1E16039900BA4B07 /* RankViewController.m */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
 		B4DA00001E13A3F40072405E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,24 +182,12 @@
 			children = (
 				B4DA00051E13A3F40072405E /* AppDelegate.h */,
 				B4DA00061E13A3F40072405E /* AppDelegate.m */,
-				B4DA001C1E13AAE80072405E /* TXNetworkTool.h */,
-				B4DA001D1E13AAE80072405E /* TXNetworkTool.m */,
-				B4DA003C1E14BBAF0072405E /* UIDevice+TExtension.h */,
-				B4DA003D1E14BBAF0072405E /* UIDevice+TExtension.m */,
-				B4DA00191E13A4720072405E /* LoginViewController.h */,
-				B4DA001A1E13A4720072405E /* LoginViewController.m */,
-				B4DA00271E13C2AE0072405E /* LoginView.h */,
-				B4DA00281E13C2AE0072405E /* LoginView.m */,
-				B4DA00301E14B1430072405E /* NavigationController.h */,
-				B4DA00311E14B1430072405E /* NavigationController.m */,
-				B4DA002D1E14B0810072405E /* TarBarController.h */,
-				B4DA002E1E14B0810072405E /* TarBarController.m */,
-				B4DA00331E14B54C0072405E /* HomeViewController.h */,
-				B4DA00341E14B54C0072405E /* HomeViewController.m */,
-				B4DA00361E14B5590072405E /* LiveViewController.h */,
-				B4DA00371E14B5590072405E /* LiveViewController.m */,
-				B4DA00391E14B5630072405E /* MeViewController.h */,
-				B4DA003A1E14B5630072405E /* MeViewController.m */,
+				B4B220621E150DC600BA4B07 /* tool */,
+				B4B220611E150DC100BA4B07 /* login */,
+				B4B220641E150E2500BA4B07 /* nav&tarbar */,
+				B4B220661E150E4F00BA4B07 /* home */,
+				B4B220651E150E4A00BA4B07 /* live */,
+				B4B220631E150E2100BA4B07 /* me */,
 				B4DA001F1E13B6660072405E /* IJKMediaFramework.framework */,
 				B4DA00021E13A3F40072405E /* Supporting Files */,
 			);
@@ -128,6 +202,7 @@
 				B4DA000E1E13A3F40072405E /* Assets.xcassets */,
 				B4DA00131E13A3F40072405E /* Info.plist */,
 				B4DA00031E13A3F40072405E /* main.m */,
+				B4B2206C1E15126600BA4B07 /* Show-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -274,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B2206F1E16039900BA4B07 /* RankViewController.m in Sources */,
 				B4DA00071E13A3F40072405E /* AppDelegate.m in Sources */,
 				B4DA00041E13A3F40072405E /* main.m in Sources */,
 				B4DA001E1E13AAE80072405E /* TXNetworkTool.m in Sources */,
@@ -281,8 +357,12 @@
 				B4DA003B1E14B5630072405E /* MeViewController.m in Sources */,
 				B4DA00291E13C2AE0072405E /* LoginView.m in Sources */,
 				B4DA001B1E13A4720072405E /* LoginViewController.m in Sources */,
+				B4B220721E16097800BA4B07 /* HotViewController.m in Sources */,
+				B4B220781E16099600BA4B07 /* CareViewController.m in Sources */,
+				B4B220691E150EB500BA4B07 /* TitleView.m in Sources */,
 				B4DA003E1E14BBAF0072405E /* UIDevice+TExtension.m in Sources */,
 				B4DA00381E14B5590072405E /* LiveViewController.m in Sources */,
+				B4B220751E16098800BA4B07 /* NewViewController.m in Sources */,
 				B4DA00321E14B1430072405E /* NavigationController.m in Sources */,
 				B4DA00351E14B54C0072405E /* HomeViewController.m in Sources */,
 			);
@@ -309,6 +389,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -356,6 +437,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -390,6 +472,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Show",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Show/Show-Prefix.pch";
 				INFOPLIST_FILE = Show/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -409,6 +493,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Show",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Show/Show-Prefix.pch";
 				INFOPLIST_FILE = Show/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

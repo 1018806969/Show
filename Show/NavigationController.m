@@ -23,7 +23,7 @@
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count) {
-        //隐藏导航栏
+        //隐藏tarbar
         viewController.hidesBottomBarWhenPushed = YES ;
         
         //自定义返回按钮
