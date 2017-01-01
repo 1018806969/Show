@@ -8,6 +8,8 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+typedef void(^TResponse)(id response);
+
 typedef NS_ENUM(NSInteger, TNetworkType)
 {
     TNetworkTypeNone = 1,
@@ -27,5 +29,6 @@ typedef NS_ENUM(NSInteger, TNetworkType)
  */
 +(TNetworkType)networkType;
 
++(void)GET:(NSString *)url param:(NSDictionary *)param scc:(TResponse)response;
 
 @end

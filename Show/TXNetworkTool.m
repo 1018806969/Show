@@ -57,4 +57,20 @@ static TXNetworkTool *_manager;
     return type;
 }
 
+
++(void)GET:(NSString *)url param:(NSDictionary *)param scc:(TResponse)response
+{
+    [[TXNetworkTool shareNetworkTool] GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *code = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
+        if ([code isEqualToString:@"100"]) {
+            //操作成功
+            response(responseObject);
+        }else{
+            NSString *msg = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"msg"]];
+            NSLog(@"errorMsg=%@",msg);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"netwrokError=%@",error.localizedDescription);
+    }];
+}
 @end

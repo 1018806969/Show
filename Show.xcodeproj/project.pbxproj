@@ -13,6 +13,13 @@
 		B4B220721E16097800BA4B07 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220711E16097800BA4B07 /* HotViewController.m */; };
 		B4B220751E16098800BA4B07 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220741E16098800BA4B07 /* NewViewController.m */; };
 		B4B220781E16099600BA4B07 /* CareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220771E16099600BA4B07 /* CareViewController.m */; };
+		B4B2207B1E16126B00BA4B07 /* CarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B2207A1E16126B00BA4B07 /* CarouselView.m */; };
+		B4B2207E1E162FE500BA4B07 /* AdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B2207D1E162FE500BA4B07 /* AdModel.m */; };
+		B4B220811E1642A900BA4B07 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220801E1642A900BA4B07 /* NetWorkRequest.m */; };
+		B4B220831E164D6B00BA4B07 /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B220821E164D6B00BA4B07 /* noimg.png */; };
+		B4B220861E16577100BA4B07 /* HotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220851E16577100BA4B07 /* HotLiveCell.m */; };
+		B4B220891E165A0B00BA4B07 /* HotLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B220881E165A0B00BA4B07 /* HotLiveModel.m */; };
+		B4B2208C1E166F3200BA4B07 /* UIImage+TExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B2208B1E166F3200BA4B07 /* UIImage+TExtension.m */; };
 		B4DA00041E13A3F40072405E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA00031E13A3F40072405E /* main.m */; };
 		B4DA00071E13A3F40072405E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA00061E13A3F40072405E /* AppDelegate.m */; };
 		B4DA000F1E13A3F40072405E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DA000E1E13A3F40072405E /* Assets.xcassets */; };
@@ -44,6 +51,19 @@
 		B4B220741E16098800BA4B07 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		B4B220761E16099600BA4B07 /* CareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareViewController.h; sourceTree = "<group>"; };
 		B4B220771E16099600BA4B07 /* CareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareViewController.m; sourceTree = "<group>"; };
+		B4B220791E16126B00BA4B07 /* CarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselView.h; sourceTree = "<group>"; };
+		B4B2207A1E16126B00BA4B07 /* CarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselView.m; sourceTree = "<group>"; };
+		B4B2207C1E162FE500BA4B07 /* AdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdModel.h; sourceTree = "<group>"; };
+		B4B2207D1E162FE500BA4B07 /* AdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdModel.m; sourceTree = "<group>"; };
+		B4B2207F1E1642A900BA4B07 /* NetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkRequest.h; sourceTree = "<group>"; };
+		B4B220801E1642A900BA4B07 /* NetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
+		B4B220821E164D6B00BA4B07 /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimg.png; sourceTree = "<group>"; };
+		B4B220841E16577100BA4B07 /* HotLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotLiveCell.h; sourceTree = "<group>"; };
+		B4B220851E16577100BA4B07 /* HotLiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotLiveCell.m; sourceTree = "<group>"; };
+		B4B220871E165A0B00BA4B07 /* HotLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotLiveModel.h; sourceTree = "<group>"; };
+		B4B220881E165A0B00BA4B07 /* HotLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotLiveModel.m; sourceTree = "<group>"; };
+		B4B2208A1E166F3200BA4B07 /* UIImage+TExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TExtension.h"; sourceTree = "<group>"; };
+		B4B2208B1E166F3200BA4B07 /* UIImage+TExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TExtension.m"; sourceTree = "<group>"; };
 		B4DA00031E13A3F40072405E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4DA00051E13A3F40072405E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4DA00061E13A3F40072405E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,8 +135,12 @@
 			children = (
 				B4DA001C1E13AAE80072405E /* TXNetworkTool.h */,
 				B4DA001D1E13AAE80072405E /* TXNetworkTool.m */,
+				B4B2207F1E1642A900BA4B07 /* NetWorkRequest.h */,
+				B4B220801E1642A900BA4B07 /* NetWorkRequest.m */,
 				B4DA003C1E14BBAF0072405E /* UIDevice+TExtension.h */,
 				B4DA003D1E14BBAF0072405E /* UIDevice+TExtension.m */,
+				B4B2208A1E166F3200BA4B07 /* UIImage+TExtension.h */,
+				B4B2208B1E166F3200BA4B07 /* UIImage+TExtension.m */,
 			);
 			name = tool;
 			sourceTree = "<group>";
@@ -159,6 +183,14 @@
 				B4B220681E150EB500BA4B07 /* TitleView.m */,
 				B4B220701E16097800BA4B07 /* HotViewController.h */,
 				B4B220711E16097800BA4B07 /* HotViewController.m */,
+				B4B220791E16126B00BA4B07 /* CarouselView.h */,
+				B4B2207A1E16126B00BA4B07 /* CarouselView.m */,
+				B4B2207C1E162FE500BA4B07 /* AdModel.h */,
+				B4B2207D1E162FE500BA4B07 /* AdModel.m */,
+				B4B220841E16577100BA4B07 /* HotLiveCell.h */,
+				B4B220851E16577100BA4B07 /* HotLiveCell.m */,
+				B4B220871E165A0B00BA4B07 /* HotLiveModel.h */,
+				B4B220881E165A0B00BA4B07 /* HotLiveModel.m */,
 				B4B220731E16098700BA4B07 /* NewViewController.h */,
 				B4B220741E16098800BA4B07 /* NewViewController.m */,
 				B4B220761E16099600BA4B07 /* CareViewController.h */,
@@ -199,6 +231,7 @@
 			children = (
 				B4DA00231E13BD4C0072405E /* login_video.mp4 */,
 				B4DA00241E13BD4C0072405E /* loginmovie.mp4 */,
+				B4B220821E164D6B00BA4B07 /* noimg.png */,
 				B4DA000E1E13A3F40072405E /* Assets.xcassets */,
 				B4DA00131E13A3F40072405E /* Info.plist */,
 				B4DA00031E13A3F40072405E /* main.m */,
@@ -290,6 +323,7 @@
 			files = (
 				B4DA000F1E13A3F40072405E /* Assets.xcassets in Resources */,
 				B4DA00261E13BD4C0072405E /* loginmovie.mp4 in Resources */,
+				B4B220831E164D6B00BA4B07 /* noimg.png in Resources */,
 				B4DA00251E13BD4C0072405E /* login_video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,12 +383,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B2207E1E162FE500BA4B07 /* AdModel.m in Sources */,
 				B4B2206F1E16039900BA4B07 /* RankViewController.m in Sources */,
+				B4B2208C1E166F3200BA4B07 /* UIImage+TExtension.m in Sources */,
 				B4DA00071E13A3F40072405E /* AppDelegate.m in Sources */,
+				B4B220891E165A0B00BA4B07 /* HotLiveModel.m in Sources */,
 				B4DA00041E13A3F40072405E /* main.m in Sources */,
 				B4DA001E1E13AAE80072405E /* TXNetworkTool.m in Sources */,
 				B4DA002F1E14B0810072405E /* TarBarController.m in Sources */,
 				B4DA003B1E14B5630072405E /* MeViewController.m in Sources */,
+				B4B220811E1642A900BA4B07 /* NetWorkRequest.m in Sources */,
 				B4DA00291E13C2AE0072405E /* LoginView.m in Sources */,
 				B4DA001B1E13A4720072405E /* LoginViewController.m in Sources */,
 				B4B220721E16097800BA4B07 /* HotViewController.m in Sources */,
@@ -362,9 +400,11 @@
 				B4B220691E150EB500BA4B07 /* TitleView.m in Sources */,
 				B4DA003E1E14BBAF0072405E /* UIDevice+TExtension.m in Sources */,
 				B4DA00381E14B5590072405E /* LiveViewController.m in Sources */,
+				B4B220861E16577100BA4B07 /* HotLiveCell.m in Sources */,
 				B4B220751E16098800BA4B07 /* NewViewController.m in Sources */,
 				B4DA00321E14B1430072405E /* NavigationController.m in Sources */,
 				B4DA00351E14B54C0072405E /* HomeViewController.m in Sources */,
+				B4B2207B1E16126B00BA4B07 /* CarouselView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
