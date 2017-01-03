@@ -8,9 +8,13 @@
 
 #import "HotViewController.h"
 #import "RankViewController.h"
+#import "LiveCollectionViewController.h"
 #import "CarouselView.h"
 #import "HotLiveCell.h"
 #import "HotLiveModel.h"
+#import "TXNetworkTool.h"
+#import "TRefreshGifHeader.h"
+
 
 @interface HotViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -19,6 +23,8 @@
 @property(nonatomic,strong)UITableView *tableView;
 
 @property(nonatomic,strong)NSMutableArray *lives;
+
+@property(nonatomic,assign)NSInteger        currentLivePage;
 
 @end
 
@@ -29,9 +35,7 @@ static NSString *const THotLiveCell = @"THotLiveCell";
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-    
-    [self getAdInfo];
-    [self getHotLIveInfo];
+    [self.tableView.mj_header beginRefreshing];
     
     __weak typeof(self)weakSelf = self ;
     _adCarouselView.selectedAd = ^(AdModel *model)
@@ -40,7 +44,13 @@ static NSString *const THotLiveCell = @"THotLiveCell";
         rankVc.title = model.title ;
         [weakSelf.navigationController pushViewController:rankVc animated:YES];
     };
-
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LiveCollectionViewController *collectionVC = [[LiveCollectionViewController alloc]init];
+    collectionVC.lives = self.lives ;
+    collectionVC.currentIndex = indexPath.row;
+    [self.navigationController pushViewController:collectionVC animated:YES];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -66,9 +76,23 @@ static NSString *const THotLiveCell = @"THotLiveCell";
 }
 -(void)getHotLIveInfo
 {
-    [NetWorkRequest hotLiveRequest:@"http://live.9158.com/Fans/GetHotLive?page=1" scc:^(id result) {
-        self.lives = result ;
-        [self.tableView reloadData];
+    [[TXNetworkTool shareNetworkTool] GET:[NSString stringWithFormat:@"http://live.9158.com/Fans/GetHotLive?page=%ld", self.currentLivePage] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        NSArray *result = [HotLiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+        if ([result isKindOfClass:[NSArray class]] && result.count) {
+            [self.lives addObjectsFromArray:result];
+            [self.tableView reloadData];
+        }else{
+            NSLog(@"暂时没有更多最新数据");
+            // 恢复当前页
+            self.currentLivePage--;
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        self.currentLivePage--;
+        NSLog(@"网络异常");
     }];
 }
 -(UITableView *)tableView
@@ -79,6 +103,17 @@ static NSString *const THotLiveCell = @"THotLiveCell";
         _tableView.dataSource = self ;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.tableHeaderView = self.adCarouselView ;
+        _tableView.tableFooterView = [UIView new];
+        _tableView.mj_header = [TRefreshGifHeader headerWithRefreshingBlock:^{
+            self.currentLivePage = 1 ;
+            self.lives = [NSMutableArray array];
+            [self getAdInfo];
+            [self getHotLIveInfo];
+        }];
+        _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+            self.currentLivePage ++ ;
+            [self getHotLIveInfo];
+        }];
         [_tableView registerClass:[HotLiveCell class] forCellReuseIdentifier:THotLiveCell];
     }
     return _tableView;
@@ -89,7 +124,12 @@ static NSString *const THotLiveCell = @"THotLiveCell";
     _adCarouselView = [[CarouselView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth,100)];
     return _adCarouselView ;
 }
-
+-(NSMutableArray *)lives
+{
+    if (_lives) return  _lives;
+    _lives = [NSMutableArray array];
+    return _lives ;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

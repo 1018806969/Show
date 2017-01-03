@@ -16,6 +16,9 @@
 #import "UIImageView+WebCache.h"
 #import <MJExtension.h>
 #import "NetWorkRequest.h"
+#import "MJRefresh.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
+
 
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height

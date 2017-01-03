@@ -11,6 +11,7 @@
 #import "Reachability.h"
 #import "TXNetworkTool.h"
 
+#import "TarBarController.h"
 @interface AppDelegate ()
 {
     Reachability *_reacha;
@@ -27,7 +28,9 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [[LoginViewController alloc] init];
+//    self.window.rootViewController = [[LoginViewController alloc] init];
+    
+    self.window.rootViewController = [[TarBarController alloc]init];
     
     [self checkNetworkStates];
     

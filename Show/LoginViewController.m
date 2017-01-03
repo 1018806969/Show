@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import <IJKMediaFramework/IJKMediaFramework.h>
+//#import <IJKMediaFramework/IJKMediaFramework.h>
 #import "LoginView.h"
 #import "TarBarController.h"
 

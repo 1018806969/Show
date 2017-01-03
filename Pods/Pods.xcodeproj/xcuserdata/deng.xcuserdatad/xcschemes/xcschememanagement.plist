@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BarrageRenderer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,7 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>058B307480F02F86A15C7953A49DFE3D</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1E9B01BABB15D0B0FC1D1EF0178F2824</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2841FD25B3EC1B9883AB6B62DBD1D73C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A11E2DE778DC4F81725ED2E4AF04CB3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80242982B4F48165A165F77377199D14</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0E3846465C7164EE52DA005AFB18C8C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8D0B1FDEC2392C6836DF5F2D20AA7FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
