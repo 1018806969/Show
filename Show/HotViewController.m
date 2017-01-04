@@ -50,7 +50,7 @@ static NSString *const THotLiveCell = @"THotLiveCell";
     LiveCollectionViewController *collectionVC = [[LiveCollectionViewController alloc]init];
     collectionVC.lives = self.lives ;
     collectionVC.currentIndex = indexPath.row;
-    [self.navigationController pushViewController:collectionVC animated:YES];
+    [self presentViewController:collectionVC animated:YES completion:nil];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

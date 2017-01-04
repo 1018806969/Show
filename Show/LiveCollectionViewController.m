@@ -9,7 +9,8 @@
 #import "LiveCollectionViewController.h"
 #import "LiveFlowLayout.h"
 #import "TRefreshGifHeader.h"
-#import "LiveCollectionViewCell.h"
+//#import "LiveCollectionViewCell.h"
+#import "PlayCollectionViewCell.h"
 
 @interface LiveCollectionViewController ()
 
@@ -28,7 +29,7 @@ static NSString * const reuseIdentifier = @"ReuserCell";
     [super viewDidLoad];
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    [self.collectionView registerClass:[LiveCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[PlayCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     TRefreshGifHeader *gifHeader = [TRefreshGifHeader headerWithRefreshingBlock:^{
         [self.collectionView.mj_header endRefreshing];
@@ -52,7 +53,7 @@ static NSString * const reuseIdentifier = @"ReuserCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    LiveCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    PlayCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.liveModel = self.lives[self.currentIndex];
     cell.parentVc = self ;
     

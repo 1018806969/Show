@@ -39,10 +39,10 @@
 		B4DA003B1E14B5630072405E /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA003A1E14B5630072405E /* MeViewController.m */; };
 		B4DA003E1E14BBAF0072405E /* UIDevice+TExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA003D1E14BBAF0072405E /* UIDevice+TExtension.m */; };
 		B4F2450C1E1B427500382BCC /* LiveFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F2450B1E1B427500382BCC /* LiveFlowLayout.m */; };
-		B4F2450F1E1B459900382BCC /* LiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F2450E1E1B459900382BCC /* LiveCollectionViewCell.m */; };
 		B4F245121E1B568C00382BCC /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245111E1B568C00382BCC /* UIViewController+Extension.m */; };
 		B4F245151E1B57DC00382BCC /* UIImageView+Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245141E1B57DC00382BCC /* UIImageView+Gif.m */; };
 		B4F245181E1B972700382BCC /* EarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245171E1B972700382BCC /* EarView.m */; };
+		B4F245501E1CCAEE00382BCC /* PlayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F2454F1E1CCAEE00382BCC /* PlayCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,14 +105,14 @@
 		B4DAFFFF1E13A3F40072405E /* Show.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Show.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F2450A1E1B427500382BCC /* LiveFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveFlowLayout.h; sourceTree = "<group>"; };
 		B4F2450B1E1B427500382BCC /* LiveFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveFlowLayout.m; sourceTree = "<group>"; };
-		B4F2450D1E1B459900382BCC /* LiveCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCollectionViewCell.h; sourceTree = "<group>"; };
-		B4F2450E1E1B459900382BCC /* LiveCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCollectionViewCell.m; sourceTree = "<group>"; };
 		B4F245101E1B568C00382BCC /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		B4F245111E1B568C00382BCC /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		B4F245131E1B57DC00382BCC /* UIImageView+Gif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Gif.h"; sourceTree = "<group>"; };
 		B4F245141E1B57DC00382BCC /* UIImageView+Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Gif.m"; sourceTree = "<group>"; };
 		B4F245161E1B972700382BCC /* EarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarView.h; sourceTree = "<group>"; };
 		B4F245171E1B972700382BCC /* EarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarView.m; sourceTree = "<group>"; };
+		B4F2454E1E1CCAEE00382BCC /* PlayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayCollectionViewCell.h; sourceTree = "<group>"; };
+		B4F2454F1E1CCAEE00382BCC /* PlayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayCollectionViewCell.m; sourceTree = "<group>"; };
 		C395C4FEECE2DFDCB205F2FD /* Pods-Show.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show.release.xcconfig"; path = "Pods/Target Support Files/Pods-Show/Pods-Show.release.xcconfig"; sourceTree = "<group>"; };
 		D32B14B38F4C2D4669FF3D26 /* libPods-Show.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Show.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -285,8 +285,8 @@
 				B4B220941E18CE5C00BA4B07 /* LiveCollectionViewController.m */,
 				B4F2450A1E1B427500382BCC /* LiveFlowLayout.h */,
 				B4F2450B1E1B427500382BCC /* LiveFlowLayout.m */,
-				B4F2450D1E1B459900382BCC /* LiveCollectionViewCell.h */,
-				B4F2450E1E1B459900382BCC /* LiveCollectionViewCell.m */,
+				B4F2454E1E1CCAEE00382BCC /* PlayCollectionViewCell.h */,
+				B4F2454F1E1CCAEE00382BCC /* PlayCollectionViewCell.m */,
 				B4F245161E1B972700382BCC /* EarView.h */,
 				B4F245171E1B972700382BCC /* EarView.m */,
 			);
@@ -431,11 +431,11 @@
 				B4B2208C1E166F3200BA4B07 /* UIImage+TExtension.m in Sources */,
 				B4F245121E1B568C00382BCC /* UIViewController+Extension.m in Sources */,
 				B4DA00071E13A3F40072405E /* AppDelegate.m in Sources */,
-				B4F2450F1E1B459900382BCC /* LiveCollectionViewCell.m in Sources */,
 				B4B220891E165A0B00BA4B07 /* HotLiveModel.m in Sources */,
 				B4DA00041E13A3F40072405E /* main.m in Sources */,
 				B4B220921E18CB0C00BA4B07 /* TRefreshGifHeader.m in Sources */,
 				B4F245151E1B57DC00382BCC /* UIImageView+Gif.m in Sources */,
+				B4F245501E1CCAEE00382BCC /* PlayCollectionViewCell.m in Sources */,
 				B4DA001E1E13AAE80072405E /* TXNetworkTool.m in Sources */,
 				B4DA002F1E14B0810072405E /* TarBarController.m in Sources */,
 				B4DA003B1E14B5630072405E /* MeViewController.m in Sources */,

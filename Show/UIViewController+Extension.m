@@ -23,7 +23,6 @@ static const void *GifKey = &GifKey;
     if (!view) {
         view = self.view ;
     }
-    dispatch_async(dispatch_get_main_queue(), ^{
         [view addSubview:gifImageView];
         
         [gifImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -33,7 +32,6 @@ static const void *GifKey = &GifKey;
         }];
         self.gifView = gifImageView;
         [gifImageView playGifAnim:images];
-    });
 }
 -(void)hideGufLoding
 {

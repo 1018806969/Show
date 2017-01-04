@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (TExtension)
++ (UIImage *)blurImage:(UIImage *)image blur:(CGFloat)blur;
 
 +(UIImage *)originImg:(UIImage *)img borderColor:(UIColor *)color borderWidth:(CGFloat)width;
 
