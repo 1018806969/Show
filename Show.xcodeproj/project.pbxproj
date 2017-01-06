@@ -43,6 +43,10 @@
 		B4F245151E1B57DC00382BCC /* UIImageView+Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245141E1B57DC00382BCC /* UIImageView+Gif.m */; };
 		B4F245181E1B972700382BCC /* EarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245171E1B972700382BCC /* EarView.m */; };
 		B4F245501E1CCAEE00382BCC /* PlayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F2454F1E1CCAEE00382BCC /* PlayCollectionViewCell.m */; };
+		B4F245531E1CECDB00382BCC /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245521E1CECDB00382BCC /* FooterView.m */; };
+		B4F245571E1CF34200382BCC /* NewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245561E1CF34200382BCC /* NewFlowLayout.m */; };
+		B4F2455A1E1CF58100382BCC /* NewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F245591E1CF58100382BCC /* NewCollectionViewCell.m */; };
+		B4F2455D1E1CFB4800382BCC /* NewAnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F2455C1E1CFB4800382BCC /* NewAnchorModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +117,14 @@
 		B4F245171E1B972700382BCC /* EarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarView.m; sourceTree = "<group>"; };
 		B4F2454E1E1CCAEE00382BCC /* PlayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayCollectionViewCell.h; sourceTree = "<group>"; };
 		B4F2454F1E1CCAEE00382BCC /* PlayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayCollectionViewCell.m; sourceTree = "<group>"; };
+		B4F245511E1CECDB00382BCC /* FooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterView.h; sourceTree = "<group>"; };
+		B4F245521E1CECDB00382BCC /* FooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterView.m; sourceTree = "<group>"; };
+		B4F245551E1CF34200382BCC /* NewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlowLayout.h; sourceTree = "<group>"; };
+		B4F245561E1CF34200382BCC /* NewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlowLayout.m; sourceTree = "<group>"; };
+		B4F245581E1CF58100382BCC /* NewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCollectionViewCell.h; sourceTree = "<group>"; };
+		B4F245591E1CF58100382BCC /* NewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCollectionViewCell.m; sourceTree = "<group>"; };
+		B4F2455B1E1CFB4800382BCC /* NewAnchorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAnchorModel.h; sourceTree = "<group>"; };
+		B4F2455C1E1CFB4800382BCC /* NewAnchorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAnchorModel.m; sourceTree = "<group>"; };
 		C395C4FEECE2DFDCB205F2FD /* Pods-Show.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show.release.xcconfig"; path = "Pods/Target Support Files/Pods-Show/Pods-Show.release.xcconfig"; sourceTree = "<group>"; };
 		D32B14B38F4C2D4669FF3D26 /* libPods-Show.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Show.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +150,15 @@
 				C395C4FEECE2DFDCB205F2FD /* Pods-Show.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4A90A191E1F7D14008A39B5 /* Care */ = {
+			isa = PBXGroup;
+			children = (
+				B4B220761E16099600BA4B07 /* CareViewController.h */,
+				B4B220771E16099600BA4B07 /* CareViewController.m */,
+			);
+			name = Care;
 			sourceTree = "<group>";
 		};
 		B4B220611E150DC100BA4B07 /* login */ = {
@@ -207,10 +228,8 @@
 				B4B220671E150EB500BA4B07 /* TitleView.h */,
 				B4B220681E150EB500BA4B07 /* TitleView.m */,
 				B4F245091E1B421E00382BCC /* hot */,
-				B4B220731E16098700BA4B07 /* NewViewController.h */,
-				B4B220741E16098800BA4B07 /* NewViewController.m */,
-				B4B220761E16099600BA4B07 /* CareViewController.h */,
-				B4B220771E16099600BA4B07 /* CareViewController.m */,
+				B4F245541E1CEF5500382BCC /* New */,
+				B4A90A191E1F7D14008A39B5 /* Care */,
 				B4B2206D1E16039900BA4B07 /* RankViewController.h */,
 				B4B2206E1E16039900BA4B07 /* RankViewController.m */,
 			);
@@ -289,8 +308,25 @@
 				B4F2454F1E1CCAEE00382BCC /* PlayCollectionViewCell.m */,
 				B4F245161E1B972700382BCC /* EarView.h */,
 				B4F245171E1B972700382BCC /* EarView.m */,
+				B4F245511E1CECDB00382BCC /* FooterView.h */,
+				B4F245521E1CECDB00382BCC /* FooterView.m */,
 			);
 			name = hot;
+			sourceTree = "<group>";
+		};
+		B4F245541E1CEF5500382BCC /* New */ = {
+			isa = PBXGroup;
+			children = (
+				B4B220731E16098700BA4B07 /* NewViewController.h */,
+				B4B220741E16098800BA4B07 /* NewViewController.m */,
+				B4F245551E1CF34200382BCC /* NewFlowLayout.h */,
+				B4F245561E1CF34200382BCC /* NewFlowLayout.m */,
+				B4F245581E1CF58100382BCC /* NewCollectionViewCell.h */,
+				B4F245591E1CF58100382BCC /* NewCollectionViewCell.m */,
+				B4F2455B1E1CFB4800382BCC /* NewAnchorModel.h */,
+				B4F2455C1E1CFB4800382BCC /* NewAnchorModel.m */,
+			);
+			name = New;
 			sourceTree = "<group>";
 		};
 		B5E9336DA3A0F1D55E78CD56 /* Frameworks */ = {
@@ -428,7 +464,9 @@
 			files = (
 				B4B2207E1E162FE500BA4B07 /* AdModel.m in Sources */,
 				B4B2206F1E16039900BA4B07 /* RankViewController.m in Sources */,
+				B4F2455D1E1CFB4800382BCC /* NewAnchorModel.m in Sources */,
 				B4B2208C1E166F3200BA4B07 /* UIImage+TExtension.m in Sources */,
+				B4F2455A1E1CF58100382BCC /* NewCollectionViewCell.m in Sources */,
 				B4F245121E1B568C00382BCC /* UIViewController+Extension.m in Sources */,
 				B4DA00071E13A3F40072405E /* AppDelegate.m in Sources */,
 				B4B220891E165A0B00BA4B07 /* HotLiveModel.m in Sources */,
@@ -441,9 +479,11 @@
 				B4DA003B1E14B5630072405E /* MeViewController.m in Sources */,
 				B4B220811E1642A900BA4B07 /* NetWorkRequest.m in Sources */,
 				B4DA00291E13C2AE0072405E /* LoginView.m in Sources */,
+				B4F245531E1CECDB00382BCC /* FooterView.m in Sources */,
 				B4DA001B1E13A4720072405E /* LoginViewController.m in Sources */,
 				B4B220721E16097800BA4B07 /* HotViewController.m in Sources */,
 				B4B220781E16099600BA4B07 /* CareViewController.m in Sources */,
+				B4F245571E1CF34200382BCC /* NewFlowLayout.m in Sources */,
 				B4B220691E150EB500BA4B07 /* TitleView.m in Sources */,
 				B4DA003E1E14BBAF0072405E /* UIDevice+TExtension.m in Sources */,
 				B4DA00381E14B5590072405E /* LiveViewController.m in Sources */,

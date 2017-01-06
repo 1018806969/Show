@@ -15,4 +15,6 @@ typedef void(^TResult)(id result);
 
 +(void)hotLiveRequest:(NSString *)url scc:(TResult)result;
 
++(void)xinAnchorRequest:(NSString *)url scc:(TResult)result;
+
 @end

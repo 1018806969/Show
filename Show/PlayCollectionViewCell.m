@@ -12,6 +12,7 @@
 #import "TXNetworkTool.h"
 #import "EarView.h"
 #import "UIImage+TExtension.h"
+#import "FooterView.h"
 
 
 #import <SDWebImageDownloader.h>
@@ -32,6 +33,8 @@
  */
 @property(nonatomic,strong)CAEmitterLayer *emitterLayer;
 
+@property(nonatomic,strong)FooterView     *footView;
+
 
 
 @end
@@ -42,6 +45,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self.contentView addSubview:self.placeHolderImgView];
+        [self.contentView addSubview:self.footView];
     }
     return self;
 }
@@ -232,5 +236,12 @@
     _emitterLayer.emitterCells = array;
     return _emitterLayer;
     
+}
+-(FooterView *)footView
+{
+    if (!_footView) {
+#warning ----------------start-----------
+    }
+    return _footView ;
 }
 @end

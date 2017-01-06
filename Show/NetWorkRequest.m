@@ -10,6 +10,7 @@
 #import "TXNetworkTool.h"
 #import "AdModel.h"
 #import "HotLiveModel.h"
+#import "NewAnchorModel.h"
 
 @implementation NetWorkRequest
 +(void)adRequest:(NSString *)url scc:(TResult)result
@@ -32,6 +33,20 @@
         if ([datas isKindOfClass:[NSArray class]] && datas.count) {
             NSArray *hotlives = [HotLiveModel mj_objectArrayWithKeyValuesArray:datas];
             result(hotlives);
+        }else
+        {
+            NSLog(@"no hotlive");
+        }
+    }];
+}
+
++(void)xinAnchorRequest:(NSString *)url scc:(TResult)result
+{
+    [TXNetworkTool GET:url param:nil scc:^(id response) {
+        NSArray *datas = [[response objectForKey:@"data"] objectForKey:@"list"];
+        if ([datas isKindOfClass:[NSArray class]] && datas.count) {
+            NSArray *newAnchors = [NewAnchorModel mj_objectArrayWithKeyValuesArray:datas];
+            result(newAnchors);
         }else
         {
             NSLog(@"no hotlive");

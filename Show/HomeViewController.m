@@ -17,8 +17,6 @@
 
 @property(nonatomic,strong)TitleView      *homeTypeView;
 
-@property(nonatomic,strong)UIScrollView   *scrollView;
-
 @end
 
 @implementation HomeViewController
@@ -33,6 +31,8 @@
     [super viewDidLoad];
     
     [self layoutNavigationBar];
+    
+    
 }
 
 -(void)searchAction

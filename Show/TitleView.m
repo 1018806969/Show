@@ -19,7 +19,10 @@
 @end
 
 @implementation TitleView
-
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -28,9 +31,14 @@
         [self addSubview:self.xinButton];
         [self addSubview:self.careButton];
         [self addSubview:self.underLine];
-                
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toSeeWorld) name:@"gotoHot" object:nil];
     }
     return self ;
+}
+-(void)toSeeWorld
+{
+    [self selectHomeType:_hotButton];
 }
 -(void)layoutSubviews
 {
