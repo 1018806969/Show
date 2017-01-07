@@ -26,7 +26,7 @@
     self.delegate = self ;
     
     [self addChildViewController:[HomeViewController new] imageName:@"home" title:@"home"];
-    [self addChildViewController:[LiveViewController new] imageName:@"live" title:@"live"];
+    [self addChildViewController:[UIViewController new] imageName:@"live" title:@"live"];
     [self addChildViewController:[MeViewController   new] imageName:@"me" title:@"me"];
         
 }
