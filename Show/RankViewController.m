@@ -37,6 +37,7 @@
     [super viewDidLoad];
     
     self.title = @"排行";
+    
 }
 
 - (void)didReceiveMemoryWarning {

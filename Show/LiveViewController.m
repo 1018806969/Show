@@ -12,15 +12,41 @@
 #define KeyColor Color(216, 41, 116)
 
 @interface LiveViewController ()<LFLiveSessionDelegate>
+
+/**
+ 是否美颜，默认为美颜
+ */
 @property(nonatomic,strong)UIButton *beautifulButton;
+/**
+ 前后摄像头转换，默认为后摄
+ */
 @property(nonatomic,strong)UIButton *changeCameraButton;
+/**
+ 关闭直播
+ */
 @property(nonatomic,strong)UIButton *closeButton;
+/**
+ 直播状态
+ */
 @property(nonatomic,strong)UILabel  *statusLabel;
+/**
+ 开始、暂停直播
+ */
 @property(nonatomic,strong)UIButton *LiveButton;
 
 
+/**
+ 直播的现实View
+ */
 @property(nonatomic,strong)UIView   *livePreView;
+/**
+ 直播RTMP地址
+ */
 @property(nonatomic,copy)NSString   *RTMPUrl;
+
+/**
+ 直播session
+ */
 @property(nonatomic,strong)LFLiveSession *liveSession;
 
 @end
@@ -30,8 +56,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //页面布局
     [self layout];
     
+    //直播环境设置
     [self congifLiveSession];
 }
 /**
@@ -77,7 +105,7 @@
     if (button.selected) {
         //start
         LFLiveStreamInfo *streamInfo = [LFLiveStreamInfo new];
-        // 如果是跟我blog教程搭建的本地服务器, 记得填写你电脑的IP地址
+        // 如果是跟我blog教程搭建的本地服务器, 记得填写你电脑的IP地址http://www.jianshu.com/p/8ea016b2720e
         streamInfo.url = @"rtmp://192.168.1.102:1935/rtmplive/room";
         self.RTMPUrl = streamInfo.url;
         [self.liveSession startLive:streamInfo];

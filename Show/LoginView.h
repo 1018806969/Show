@@ -7,6 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
+/**
+ 登录方式
+
+ - TLoginTypeSina: sina
+ - TLoginTypeWeChat: wechat
+ - TLoginTypeQQ: qq
+ - TLoginTypeFast: 快速登录通道
+ */
 typedef NS_ENUM(NSInteger, TLoginType)
 {
     TLoginTypeSina,
@@ -19,6 +28,9 @@ typedef void(^TLoginSelected)(TLoginType loginType);
 
 @interface LoginView : UIView
 
+/**
+ 选择登录方式的回调
+ */
 @property(nonatomic,copy)TLoginSelected loginSelected;
 
 @end

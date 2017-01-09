@@ -11,14 +11,22 @@
 
 @interface HotLiveCell()
 
+/**
+ 信息View，包括头像，地址等
+ */
+@property(nonatomic,strong)UIView                  *upView;
+
 @property(nonatomic,strong)UIImageView             *headImageView;
 @property(nonatomic,strong)UIButton                *locationButton;
 @property(nonatomic,strong)UILabel                 *namelabel;
 @property(nonatomic,strong)UIImageView             *starImageView;
-@property(nonatomic,strong)UIImageView             *bgImageView;
 @property(nonatomic,strong)UILabel                 *watchLabel;
 
-@property(nonatomic,strong)UIView                  *upView;
+/**
+ anchor大图
+ */
+@property(nonatomic,strong)UIImageView             *bgImageView;
+
 
 @end
 
@@ -44,6 +52,7 @@
     _liveModel = liveModel ;
     
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:liveModel.smallpic] placeholderImage:[UIImage imageNamed:@"header"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        //切圆角
         image = [UIImage originImg:image borderColor:[UIColor blackColor] borderWidth:2];
         self.headImageView.image = image ;
     }];

@@ -26,7 +26,7 @@ static TXNetworkTool *_manager;
 
 +(TNetworkType)networkType
 {
-    
+    //获取状态栏的所有子视图
     NSArray *subViews = [[[[UIApplication sharedApplication]valueForKey:@"statusBar"]valueForKey:@"foregroundView"]subviews];
     
     TNetworkType type = TNetworkTypeNone;

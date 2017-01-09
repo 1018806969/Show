@@ -9,7 +9,6 @@
 #import "LiveCollectionViewController.h"
 #import "LiveFlowLayout.h"
 #import "TRefreshGifHeader.h"
-//#import "LiveCollectionViewCell.h"
 #import "PlayCollectionViewCell.h"
 
 @interface LiveCollectionViewController ()

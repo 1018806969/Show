@@ -33,6 +33,9 @@
  */
 @property(nonatomic,strong)CAEmitterLayer *emitterLayer;
 
+/**
+ 选项
+ */
 @property(nonatomic,strong)FooterView     *footView;
 
 
@@ -45,7 +48,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self.contentView addSubview:self.placeHolderImgView];
-        [self.contentView addSubview:self.footView];
     }
     return self;
 }
@@ -107,6 +109,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange) name:IJKMPMoviePlayerLoadStateDidChangeNotification object:self.moviePlayer];
     
     [self.moviePlayer.view.layer insertSublayer:self.emitterLayer above:self.earView.layer];
+    [self.moviePlayer.view addSubview:self.footView];
 
 }
 -(void)stateDidChange
@@ -240,8 +243,45 @@
 -(FooterView *)footView
 {
     if (!_footView) {
-#warning ----------------start-----------
+        _footView = [[FooterView alloc]initWithFrame:CGRectMake(0, ScreenHeight-50, ScreenWidth, 40)];
+        __weak typeof(self) weakSelf = self ;
+        _footView.callBack = ^(TSelectFooterItem item)
+        {
+            NSLog(@"click=%ld",(long)item);
+            switch (item) {
+                case TSelectFooterItemTalk_public:
+                    NSLog(@"talk_public");
+                    break;
+                case TSelectFooterItemTalk_private:
+                    NSLog(@"talk_private");
+                    break;
+                case TSelectFooterItemTalk_gift:
+                    NSLog(@"send gift");
+                    break;
+                case TSelectFooterItemTalk_rank:
+                    NSLog(@"talk_rank");
+                    break;
+                case TSelectFooterItemTalk_share:
+                    NSLog(@"talk_share");
+                    break;
+                case TSelectFooterItemTalk_close:
+                    [weakSelf quit];
+                    break;
+            }
+        };
     }
     return _footView ;
+}
+-(void)quit
+{
+    if (_earView) {
+        [_earView removeFromSuperview];
+        _earView = nil ;
+    }
+    if (_moviePlayer) {
+        [self.moviePlayer shutdown];
+        [[NSNotificationCenter defaultCenter]removeObserver:self];
+    }
+    [self.parentVc dismissViewControllerAnimated:YES completion:nil];
 }
 @end

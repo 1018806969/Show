@@ -18,38 +18,12 @@
     [TXNetworkTool GET:url param:nil scc:^(id response) {
         NSArray *datas = [response objectForKey:@"data"];
         if ([datas isKindOfClass:[NSArray class]] && datas.count) {
+            //MJExtension
             NSArray *ads = [AdModel mj_objectArrayWithKeyValuesArray:datas];
             result(ads);
         }else
         {
             NSLog(@"no ads");
-        }
-    }];
-}
-+(void)hotLiveRequest:(NSString *)url scc:(TResult)result
-{
-    [TXNetworkTool GET:url param:nil scc:^(id response) {
-        NSArray *datas = [[response objectForKey:@"data"] objectForKey:@"list"];
-        if ([datas isKindOfClass:[NSArray class]] && datas.count) {
-            NSArray *hotlives = [HotLiveModel mj_objectArrayWithKeyValuesArray:datas];
-            result(hotlives);
-        }else
-        {
-            NSLog(@"no hotlive");
-        }
-    }];
-}
-
-+(void)xinAnchorRequest:(NSString *)url scc:(TResult)result
-{
-    [TXNetworkTool GET:url param:nil scc:^(id response) {
-        NSArray *datas = [[response objectForKey:@"data"] objectForKey:@"list"];
-        if ([datas isKindOfClass:[NSArray class]] && datas.count) {
-            NSArray *newAnchors = [NewAnchorModel mj_objectArrayWithKeyValuesArray:datas];
-            result(newAnchors);
-        }else
-        {
-            NSLog(@"no hotlive");
         }
     }];
 }

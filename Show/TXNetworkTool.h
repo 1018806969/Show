@@ -10,6 +10,15 @@
 
 typedef void(^TResponse)(id response);
 
+/**
+ 网络类型枚举类型
+
+ - TNetworkTypeNone: 无网络
+ - TNetworkType2G: 2G网络
+ - TNetworkType3G: 3G网络
+ - TNetworkType4G: 4G网络
+ - TNetworkTypeWifi: WiFi
+ */
 typedef NS_ENUM(NSInteger, TNetworkType)
 {
     TNetworkTypeNone = 1,
@@ -22,6 +31,9 @@ typedef NS_ENUM(NSInteger, TNetworkType)
 
 @interface TXNetworkTool : AFHTTPSessionManager
 
+/**
+ 网络工具单例
+ */
 +(instancetype)shareNetworkTool;
 
 /**
@@ -29,6 +41,9 @@ typedef NS_ENUM(NSInteger, TNetworkType)
  */
 +(TNetworkType)networkType;
 
+/**
+ get网络请求
+ */
 +(void)GET:(NSString *)url param:(NSDictionary *)param scc:(TResponse)response;
 
 @end

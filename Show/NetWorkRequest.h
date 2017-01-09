@@ -11,10 +11,9 @@
 typedef void(^TResult)(id result);
 @interface NetWorkRequest : NSObject
 
+/**
+ 获取首页广告数据
+ */
 +(void)adRequest:(NSString *)url scc:(TResult)result;
-
-+(void)hotLiveRequest:(NSString *)url scc:(TResult)result;
-
-+(void)xinAnchorRequest:(NSString *)url scc:(TResult)result;
 
 @end

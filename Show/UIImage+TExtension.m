@@ -7,6 +7,9 @@
 //
 
 #import "UIImage+TExtension.h"
+
+//Accelerate框架 (Accelerate.framework)包含执行数字信号处理、线性代数、图像处理计算的接口。
+//使用该框架的优点是它们针对所有的ios设备上存在的硬件配置做了优化，因此你能写一次代码确保在所有设备上有效运行。
 #import <Accelerate/Accelerate.h>
 
 
@@ -85,9 +88,9 @@
     //开启绘图上下文
     UIGraphicsBeginImageContextWithOptions(img.size, NO, 0);
     //画一个大的圆形
-    UIBezierPath *paht = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, ovalW, ovalW)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, ovalW, ovalW)];
     [color set];
-    [paht fill];
+    [path fill];
     //设置裁定区域
     UIBezierPath *clipPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(width, width, imgW, imgW)];
     [clipPath addClip];
@@ -102,5 +105,19 @@
     return image ;
     
     
+}
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
+{
+    if (color) {
+        CGRect rect = CGRectMake(0, 0, size.width, size.height);
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextSetFillColorWithColor(context,color.CGColor);
+        CGContextFillRect(context, rect);
+        UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return img;
+    }
+    return nil;
 }
 @end

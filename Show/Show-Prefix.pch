@@ -23,6 +23,8 @@
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define Alert(msg) [[[UIAlertView alloc] initWithTitle:@"喵" message:msg delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show]
+
 
 
 

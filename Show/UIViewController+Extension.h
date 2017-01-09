@@ -10,7 +10,7 @@
 
 @interface UIViewController (Extension)
 
-/** Gif加载状态 */
+/** Gif加载视图，给类目添加属性，需要利用运行时重写set、get方法 */
 @property(nonatomic, weak) UIImageView *gifView;
 /**
  *  显示GIF加载动画
@@ -21,5 +21,9 @@
 - (void)showGifLoding:(NSArray *)images inView:(UIView *)view;
 
 
+/**
+ 隐藏加载动画
+ */
 -(void)hideGufLoding;
+
 @end

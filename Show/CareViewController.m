@@ -50,11 +50,14 @@
 -(void)layout
 {
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.top.mas_equalTo(0);
+        make.center.equalTo(self.view);
+        make.width.mas_equalTo(ScreenWidth-100);
+        make.height.mas_equalTo(ScreenWidth-100);
     }];
     [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(-80);
-        make.height.mas_equalTo(44);
+        make.top.equalTo(self.imageView.mas_bottom).mas_offset(30);
+        make.centerX.equalTo(self.view);
+        make.height.mas_equalTo(40);
     }];
 }
 - (void)didReceiveMemoryWarning {

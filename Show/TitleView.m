@@ -32,6 +32,9 @@
         [self addSubview:self.careButton];
         [self addSubview:self.underLine];
         
+        /**
+         添加监听，在关注页面中点击看热门，需要展示热门视图，并重置下划线，相当于点击了热门按钮
+         */
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toSeeWorld) name:@"gotoHot" object:nil];
     }
     return self ;

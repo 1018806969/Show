@@ -6,6 +6,13 @@
 //  Copyright © 2016年 txx. All rights reserved.
 //
 
+/**
+ 自定义的导航控制器
+ 1.添加了子视图控制器，并设置了导航条的icon和标题
+ 2.重写了-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController方法
+    在点击直播选项时，先判断是否有相关权限、是否是真机调试，如果不符合返回no，使显示失效，如果符合条件就present直播页面
+ 
+*/
 #import "TarBarController.h"
 #import "NavigationController.h"
 #import "HomeViewController.h"

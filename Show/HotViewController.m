@@ -18,12 +18,24 @@
 
 @interface HotViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+/**
+ 广告轮播图
+ */
 @property(nonatomic,strong)CarouselView *adCarouselView;
 
+/**
+ anchor列表
+ */
 @property(nonatomic,strong)UITableView *tableView;
 
+/**
+ anchor列表
+ */
 @property(nonatomic,strong)NSMutableArray *lives;
 
+/**
+ 当前anchor列表的页数，列表是分页处理，支出上滑、下拉
+ */
 @property(nonatomic,assign)NSInteger        currentLivePage;
 
 @end
@@ -35,8 +47,10 @@ static NSString *const THotLiveCell = @"THotLiveCell";
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
+    //默认刷新
     [self.tableView.mj_header beginRefreshing];
     
+    //选中广告回调
     __weak typeof(self)weakSelf = self ;
     _adCarouselView.selectedAd = ^(AdModel *model)
     {
@@ -44,6 +58,7 @@ static NSString *const THotLiveCell = @"THotLiveCell";
         rankVc.title = model.title ;
         [weakSelf.navigationController pushViewController:rankVc animated:YES];
     };
+
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -67,6 +82,9 @@ static NSString *const THotLiveCell = @"THotLiveCell";
 {
     return 465;
 }
+/**
+ 获取广告数据
+ */
 -(void)getAdInfo
 {
     [NetWorkRequest adRequest:@"http://live.9158.com/Living/GetAD" scc:^(id result) {
@@ -74,6 +92,9 @@ static NSString *const THotLiveCell = @"THotLiveCell";
     }];
     
 }
+/**
+ 获取anchor数据
+ */
 -(void)getHotLIveInfo
 {
     [[TXNetworkTool shareNetworkTool] GET:[NSString stringWithFormat:@"http://live.9158.com/Fans/GetHotLive?page=%ld", self.currentLivePage] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

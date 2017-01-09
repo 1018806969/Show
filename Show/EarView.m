@@ -10,8 +10,14 @@
 
 @interface EarView()
 
+/**
+ 是imageView的父试图
+ */
 @property(nonatomic,strong)UIView *view;
 
+/**
+ 加载过程中的占位imgView
+ */
 @property(nonatomic,strong)UIImageView *imgView;
 
 @property(nonatomic,strong)IJKFFMoviePlayerController *moviePlayer;
@@ -54,6 +60,9 @@
     
     [_moviePlayer prepareToPlay];
 }
+/**
+ 重写
+ */
 -(void)removeFromSuperview
 {
     if (_moviePlayer) {

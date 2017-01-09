@@ -63,7 +63,7 @@
     }];
 }
 /**
- 播放加载状态改变
+ 加载状态改变的通知
  */
 -(void)playerLoadStateDidChanged
 {

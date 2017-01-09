@@ -10,8 +10,14 @@
 
 @interface LiveCollectionViewController : UICollectionViewController
 
+/**
+ anchor列表
+ */
 @property(nonatomic,strong)NSArray *lives;
 
+/**
+ 当前播放的anchor index
+ */
 @property(nonatomic,assign)NSUInteger currentIndex;
 
 @end

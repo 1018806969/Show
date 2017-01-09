@@ -6,6 +6,9 @@
 //  Copyright © 2016年 txx. All rights reserved.
 //
 
+/**
+ 广告模型
+ */
 #import <Foundation/Foundation.h>
 
 @interface AdModel : NSObject

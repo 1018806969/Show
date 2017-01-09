@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
+/**
+ 当前需要展示的视图
+
+ - THomeTypeHot: 热门
+ - THomeTypeNew: 最新
+ - THomeTypeCare: 关心
+ */
 typedef NS_ENUM(NSInteger, THomeType)
 {
     THomeTypeHot,
@@ -19,11 +26,16 @@ typedef void(^TSelectedHomeType)(THomeType homeType);
 
 @interface TitleView : UIView
 
+/**
+ 点击展示视图类型回调
+ */
 @property(nonatomic,copy)TSelectedHomeType selectedHomeType;
 
-@property(nonatomic,assign)THomeType *homeType;
+/**
+ 重置下划线的位置
 
-
+ @param homeType 要展示的视图
+ */
 -(void)resetUnderLineLocation:(THomeType)homeType;
 
 @end

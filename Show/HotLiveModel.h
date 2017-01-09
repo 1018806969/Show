@@ -6,6 +6,9 @@
 //  Copyright © 2016年 txx. All rights reserved.
 //
 
+/**
+ anchor列表模型
+ */
 #import <Foundation/Foundation.h>
 
 @interface HotLiveModel : NSObject
