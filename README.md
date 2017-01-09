@@ -4,7 +4,7 @@ demo use step
 
 1.clone this resp
 
-2.clone IJKMediaFramework resp 
+2.clone IJKMediaFramework resp  https://github.com/1018806969/IJKMediaFramework
 
 3.decompress IJKMediaFramework 拖到项目中
 
