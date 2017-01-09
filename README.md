@@ -1,5 +1,14 @@
 # Show
 
+demo use step
+
+1.clone this resp
+
+2.clone IJKMediaFramework resp 
+
+3.decompress IJKMediaFramework 拖到项目中
+
+
 main function:
 
 1.get current network type,such as 2g,3g,wifi,and so on ,monitor network change
